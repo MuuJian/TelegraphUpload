@@ -30,6 +30,7 @@ def upload():
                             'https://telegra.ph/upload', files={'file': 
                                                                 ('file', f, 
                                                                 'image/jpeg')}).json()[0]['src'])
+            print(it)
                                                     
 upload()
 html = "<img src='{}'>" * len(file)
