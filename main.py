@@ -14,6 +14,11 @@ telegraph.create_account(short_name = ShortName, author_name = AuthorName, autho
 
 path = list()
 
+if os.path.exists("file/.DS_store"):
+      os.remove("file/.DS_store")
+
+if os.path.exists("file/info.txt"):
+      os.remove("file/info.txt")
 dir_list = os.listdir('file')
 file = list()
 for cur_file in dir_list:
