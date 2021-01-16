@@ -26,12 +26,14 @@ file.sort()
 def upload():
     for it in file:
         with open(it, 'rb') as f:
+            print(it)
             path.append(requests.post(
                             'https://telegra.ph/upload', files={'file': 
                                                                 ('file', f, 
                                                                 'image/jpeg')}).json()[0]['src'])
-            print(it)
-                                                    
+            
+                    
+
 upload()
 html = "<img src='{}'>" * len(file)
 
