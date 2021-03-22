@@ -26,7 +26,8 @@ for cur_file in dir_list:
     filepath = os.path.join('file', cur_file)
     if os.path.isfile(filepath): # 判断是否是文件还是目录需要用绝对路径
         file.append(filepath)
-file.sort(key=lambda x: int(x.split('_')[1][:-4]))
+file.sort(key= lambda x: int(x.split('/')[1][:-4]))
+#file.sort(key=lambda x: int(x.split('_')[1][:-4]))
 
 def upload():
     for it in file:
